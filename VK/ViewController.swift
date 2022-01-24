@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     @IBAction func enterButton(_ sender: UIButton) {
-        if login.text == "admin" && password.text == "12345" {
+        if login.text == "1" && password.text == "1" {
             
         } else {
             let alertWrongPassword = UIAlertController(title: "Ошибка", message: "Неверный пароль", preferredStyle: .alert)
@@ -37,4 +37,20 @@ class ViewController: UIViewController {
     }
     
 }
-
+//
+//extension ViewController: UITableViewDataSource {
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 10
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "SomeCell", for: indexPath) as UITableViewCell
+//
+//    }
+//
+//
+//}
+//
