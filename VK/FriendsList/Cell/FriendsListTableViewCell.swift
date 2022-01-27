@@ -27,4 +27,14 @@ class FriendsListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = nil
+        contactImageVeiw.image = nil
+    }
+    
+    func setData(with data: FriendsListCellModel) {
+        titleLabel.text = data.name
+        contactImageVeiw.image = UIImage(named: data.image)
+    }
 }

@@ -1,19 +1,19 @@
 //
-//  FriendsListTableViewController.swift
+//  GroupTableViewController.swift
 //  VK
 //
-//  Created by Дмитрий Супрун on 24.01.22.
+//  Created by Дмитрий Супрун on 27.01.22.
 //
 
 import UIKit
 
-class FriendsListTableViewController: UITableViewController {
-
-    var contactList: [FriendsListCellModel] = [.init(name: "Чубака", image: "Chubaka"), .init(name: "Оби-Ван Кеноби", image: "Obi-Van"), .init(name: "Дарт Вейдер", image: "Darth_Vader"), .init(name: "Йода", image: "Yoda")]
+class GroupTableViewController: UITableViewController {
+    
+    let group = ["1", "2", "3"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,40 +21,30 @@ class FriendsListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        tableView.register(FriendsListTableViewCell.nib(), forCellReuseIdentifier: "FriendsListTableViewCellID")
     }
-    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return contactList.count
+        return group.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsListTableViewCellID", for: indexPath) as! FriendsListTableViewCell
-        let name = contactList[indexPath.row].name
-        let image = contactList[indexPath.row].image
-        
-        cell.titleLabel.text = name
-        cell.contactImageVeiw.image = UIImage(named: image)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "regularCell", for: indexPath)
+        cell.textLabel?.text = group[indexPath.row]
         
         // Configure the cell...
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(contactList[indexPath.row])
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -100,5 +90,5 @@ class FriendsListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

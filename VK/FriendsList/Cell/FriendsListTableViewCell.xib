@@ -37,12 +37,12 @@
                     <constraint firstItem="oQs-Aq-oZV" firstAttribute="leading" secondItem="6Km-GA-UvL" secondAttribute="trailing" constant="50" id="zi5-El-Cyd"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <viewLayoutGuide key="safeArea" id="RpE-oa-TwO"/>
             <constraints>
-                <constraint firstItem="H2p-sc-9uM" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="4w6-2c-pMQ"/>
-                <constraint firstItem="H2p-sc-9uM" firstAttribute="trailing" secondItem="njF-e1-oar" secondAttribute="trailing" id="Ztk-jc-NEW"/>
-                <constraint firstItem="H2p-sc-9uM" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="fhp-5x-biW"/>
-                <constraint firstItem="H2p-sc-9uM" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="u0f-N8-nfe"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="bottom" secondItem="KGk-i7-Jjw" secondAttribute="bottom" id="4w6-2c-pMQ"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="trailing" secondItem="KGk-i7-Jjw" secondAttribute="trailing" id="Ztk-jc-NEW"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="fhp-5x-biW"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="u0f-N8-nfe"/>
             </constraints>
             <connections>
                 <outlet property="contactImageVeiw" destination="6Km-GA-UvL" id="Zah-GA-Shg"/>
