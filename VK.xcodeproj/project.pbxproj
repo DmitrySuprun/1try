@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5235BF527A3D87C00ABAD13 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235BF327A3D87C00ABAD13 /* GroupTableViewCell.swift */; };
+		D5235BF627A3D87C00ABAD13 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5235BF427A3D87C00ABAD13 /* GroupTableViewCell.xib */; };
 		D5625C07279E0900006759FD /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C06279E0900006759FD /* FriendsListTableViewController.swift */; };
 		D5625C0B279E0A57006759FD /* FriendsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C09279E0A57006759FD /* FriendsListTableViewCell.swift */; };
 		D5625C0C279E0A57006759FD /* FriendsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5625C0A279E0A57006759FD /* FriendsListTableViewCell.xib */; };
 		D5625C0F279E91A5006759FD /* FriendsListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C0E279E91A5006759FD /* FriendsListCellModel.swift */; };
 		D5625C1427A1BE85006759FD /* FriendsGroupCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C1327A1BE85006759FD /* FriendsGroupCellModel.swift */; };
 		D5625C2027A2817F006759FD /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C1E27A2817F006759FD /* GroupTableViewController.swift */; };
-		D5625C2127A2817F006759FD /* GroupTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5625C1F27A2817F006759FD /* GroupTableViewController.xib */; };
 		D5625C2C27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C2A27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift */; };
 		D5625C2D27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5625C2B27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib */; };
 		D5625C2F27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C2E27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift */; };
@@ -27,13 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5235BF327A3D87C00ABAD13 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		D5235BF427A3D87C00ABAD13 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
 		D5625C06279E0900006759FD /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
 		D5625C09279E0A57006759FD /* FriendsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewCell.swift; sourceTree = "<group>"; };
 		D5625C0A279E0A57006759FD /* FriendsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListTableViewCell.xib; sourceTree = "<group>"; };
 		D5625C0E279E91A5006759FD /* FriendsListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListCellModel.swift; sourceTree = "<group>"; };
 		D5625C1327A1BE85006759FD /* FriendsGroupCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGroupCellModel.swift; sourceTree = "<group>"; };
 		D5625C1E27A2817F006759FD /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
-		D5625C1F27A2817F006759FD /* GroupTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewController.xib; sourceTree = "<group>"; };
 		D5625C2A27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5625C2B27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 		D5625C2E27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileInfoCollectionViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 		D5625C1127A1BE35006759FD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D5235BF327A3D87C00ABAD13 /* GroupTableViewCell.swift */,
+				D5235BF427A3D87C00ABAD13 /* GroupTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -123,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				D5625C1E27A2817F006759FD /* GroupTableViewController.swift */,
-				D5625C1F27A2817F006759FD /* GroupTableViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -255,8 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5625C2D27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib in Resources */,
+				D5235BF627A3D87C00ABAD13 /* GroupTableViewCell.xib in Resources */,
 				D57B50B9278B7D9F008E256E /* LaunchScreen.storyboard in Resources */,
-				D5625C2127A2817F006759FD /* GroupTableViewController.xib in Resources */,
 				D57B50B6278B7D9F008E256E /* Assets.xcassets in Resources */,
 				D57B50B4278B7D9E008E256E /* Main.storyboard in Resources */,
 				D5625C0C279E0A57006759FD /* FriendsListTableViewCell.xib in Resources */,
@@ -273,6 +276,7 @@
 				D57B50B1278B7D9E008E256E /* ViewController.swift in Sources */,
 				D5625C2F27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift in Sources */,
 				D57B50AD278B7D9E008E256E /* AppDelegate.swift in Sources */,
+				D5235BF527A3D87C00ABAD13 /* GroupTableViewCell.swift in Sources */,
 				D5625C2C27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift in Sources */,
 				D5625C07279E0900006759FD /* FriendsListTableViewController.swift in Sources */,
 				D5625C0B279E0A57006759FD /* FriendsListTableViewCell.swift in Sources */,

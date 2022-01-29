@@ -12,6 +12,10 @@ class FriendsListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contactImageVeiw: UIImageView!
     
+    @IBOutlet weak var imageTest: UIImageView!
+    @IBOutlet weak var lableTest: UILabel!
+    
+    
     static func nib() -> UINib {
         return UINib(nibName: "FriendsListTableViewCell", bundle: nil)
     }

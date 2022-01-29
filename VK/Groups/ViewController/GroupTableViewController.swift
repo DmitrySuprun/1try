@@ -9,7 +9,7 @@ import UIKit
 
 class GroupTableViewController: UITableViewController {
     
-    let group = ["1", "2", "3"]
+    let group: [FriendsListCellModel] = [.init(name: "Чубака", image: "Chubaka")]
     
     
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class GroupTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        tableView.register(GroupTableViewCell.nib(), forCellReuseIdentifier: "GroupTableViewCellID")
     }
 
     // MARK: - Table view data source
@@ -37,8 +38,8 @@ class GroupTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "regularCell", for: indexPath)
-        cell.textLabel?.text = group[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCellID", for: indexPath)
+        cell.textLabel?.text = group[indexPath.row].name
         
         // Configure the cell...
 

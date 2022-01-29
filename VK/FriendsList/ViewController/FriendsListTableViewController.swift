@@ -22,6 +22,8 @@ class FriendsListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         tableView.register(FriendsListTableViewCell.nib(), forCellReuseIdentifier: "FriendsListTableViewCellID")
+        tableView.register(FriendsListTableViewCell.nib(), forCellReuseIdentifier: "TestCellID")
+
     }
     
 
@@ -34,11 +36,18 @@ class FriendsListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return contactList.count
+        return contactList.count + 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == (contactList.count + 1) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TestCellID", for: indexPath) as! FriendsListTableViewCell
+            let model = contactList[indexPath.row - 1]
+            cell.setData(with: model)
+            return cell
+        }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsListTableViewCellID", for: indexPath) as! FriendsListTableViewCell
         let model = contactList[indexPath.row]
