@@ -1,17 +1,16 @@
 //
-//  GroupTableViewController.swift
+//  AllGroupTableViewController.swift
 //  VK
 //
-//  Created by Дмитрий Супрун on 27.01.22.
+//  Created by Дмитрий Супрун on 31.01.22.
 //
 
 import UIKit
 
-class GroupTableViewController: UITableViewController {
+class AllGroupTableViewController: UITableViewController {
     
-    let group: [FriendsListCellModel] = [.init(name: "Чубака", image: "Chubaka")]
-    
-    
+    var allGroup: [AllGroupCellModel] = [.init(name: "Чубака", image: "Chubaka"), .init(name: "Оби-Ван Кеноби", image: "Obi-Van"), .init(name: "Дарт Вейдер", image: "Darth_Vader"), .init(name: "Йода", image: "Yoda")]
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,26 +20,28 @@ class GroupTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        tableView.register(GroupTableViewCell.nib(), forCellReuseIdentifier: "GroupTableViewCellID")
+        tableView.register(AllGroupTableViewCell.nib(), forCellReuseIdentifier: "AllGroupCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return group.count
+        return allGroup.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCellID", for: indexPath)
-        cell.textLabel?.text = group[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupCell", for: indexPath) as! AllGroupTableViewCell
+        let data = allGroup[indexPath.row]
+        cell.setData(with: data)
         
+
         // Configure the cell...
 
         return cell

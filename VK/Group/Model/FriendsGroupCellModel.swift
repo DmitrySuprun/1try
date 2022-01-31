@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Group {
-    var groupFriend: String
+struct GroupListCellModel {
+    var name: String
+    var image: String
 }

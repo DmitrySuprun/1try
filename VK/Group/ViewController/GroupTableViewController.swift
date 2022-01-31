@@ -1,19 +1,19 @@
 //
-//  FriendsListTableViewController.swift
+//  GroupTableViewController.swift
 //  VK
 //
-//  Created by Дмитрий Супрун on 24.01.22.
+//  Created by Дмитрий Супрун on 27.01.22.
 //
 
 import UIKit
 
-class FriendsListTableViewController: UITableViewController {
-
-    var contactList: [FriendsListCellModel] = [.init(name: "Чубака", image: "Chubaka"), .init(name: "Оби-Ван Кеноби", image: "Obi-Van"), .init(name: "Дарт Вейдер", image: "Darth_Vader"), .init(name: "Йода", image: "Yoda")]
+class GroupTableViewController: UITableViewController {
+    
+    let groupList: [GroupListCellModel] = [.init(name: "Dark Side", image: "darkSide"), .init(name: "Stars", image: "Stars"), .init(name: "StarWars", image: "StarWars")]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,10 +21,8 @@ class FriendsListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        tableView.register(FriendsListTableViewCell.nib(), forCellReuseIdentifier: "FriendsListTableViewCellID")
-
+        tableView.register(GroupTableViewCell.nib(), forCellReuseIdentifier: "GroupTableViewCellID")
     }
-    
 
     // MARK: - Table view data source
 
@@ -35,32 +33,19 @@ class FriendsListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return contactList.count
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsListTableViewCellID", for: indexPath) as! FriendsListTableViewCell
-        let model = contactList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCellID", for: indexPath) as! GroupTableViewCell
+        let model = groupList[indexPath.row]
         cell.setData(with: model)
-        
         // Configure the cell...
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = contactList[indexPath.row]
-        performSegue(withIdentifier: "friendProfile", sender: model)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "friendProfile" {
-            guard let collectionViewController = segue.destination as? FriendProfileInfoCollectionViewController, let model = sender as? FriendsListCellModel else { return }
-            collectionViewController.userDataInfo.append(model)
-        }
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -70,16 +55,18 @@ class FriendsListTableViewController: UITableViewController {
     }
     */
 
+    /*
+    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            contactList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
- 
+    */
+
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -104,5 +91,5 @@ class FriendsListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

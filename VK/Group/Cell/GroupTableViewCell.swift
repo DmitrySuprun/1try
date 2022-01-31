@@ -9,6 +9,9 @@ import UIKit
 
 class GroupTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var groupImageView: UIImageView!
+    @IBOutlet weak var groupLabel: UILabel!
+    
     static func nib() -> UINib {
         return UINib(nibName: "GroupTableViewCell", bundle: nil)
     }
@@ -24,9 +27,14 @@ class GroupTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        titleLabel.text = nil
-//        contactImageVeiw.image = nil
-//    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        groupLabel.text = nil
+        groupImageView.image = nil
+    }
+    
+    func setData(with data: GroupListCellModel) {
+        groupLabel.text = data.name
+        groupImageView.image = UIImage(named: data.image)
+    }
 }

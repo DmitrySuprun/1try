@@ -9,12 +9,8 @@ import UIKit
 
 class FriendsListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var contactImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contactImageVeiw: UIImageView!
-    
-    @IBOutlet weak var imageTest: UIImageView!
-    @IBOutlet weak var lableTest: UILabel!
-    
     
     static func nib() -> UINib {
         return UINib(nibName: "FriendsListTableViewCell", bundle: nil)
@@ -34,11 +30,11 @@ class FriendsListTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = nil
-        contactImageVeiw.image = nil
+        contactImageView.image = nil
     }
     
     func setData(with data: FriendsListCellModel) {
         titleLabel.text = data.name
-        contactImageVeiw.image = UIImage(named: data.image)
+        contactImageView.image = UIImage(named: data.image)
     }
 }
