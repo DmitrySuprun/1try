@@ -56,17 +56,18 @@ class AllGroupTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            allGroup.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .middle)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -94,3 +95,26 @@ class AllGroupTableViewController: UITableViewController {
     */
     
 }
+
+
+
+@IBDesignable class TestView: UIView {
+    
+    @IBInspectable var radius: CGFloat = 10 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.setFillColor(UIColor.red.cgColor)
+        context.fillEllipse(in: CGRect(x: rect.midX - radius,
+                                       y: rect.midY - radius,
+                                       width: radius * 2,
+                                       height: radius * 2))
+        
+    }
+}
+

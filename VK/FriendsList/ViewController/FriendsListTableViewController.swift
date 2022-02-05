@@ -25,7 +25,28 @@ class FriendsListTableViewController: UITableViewController {
 
     }
     
-
+    @IBAction func addNewFriend(_ sender: Any) {
+        let alertController = UIAlertController(title: "Добавить нового друга", message: "Введите имя", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Имя"
+        })
+        
+        
+        
+        let createButton = UIAlertAction(title: "Create", style: .default, handler: { [self] _ in
+            guard let contactName = alertController.textFields?[0].text else { return }
+            self.contactList.append(.init(name: contactName, image: "NewFriend"))
+            self.tableView.reloadData()
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(createButton)
+        alertController.addAction(cancelButton)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,6 +100,7 @@ class FriendsListTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+
  
     /*
     // Override to support rearranging the table view.
@@ -106,3 +128,5 @@ class FriendsListTableViewController: UITableViewController {
     */
 
 }
+
+

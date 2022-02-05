@@ -41,7 +41,8 @@ class GroupTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCellID", for: indexPath) as! GroupTableViewCell
         let model = groupList[indexPath.row]
         cell.setData(with: model)
-        // Configure the cell...
+        cell.circleView(image: model.image)
+        
 
         return cell
     }

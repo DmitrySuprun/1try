@@ -1,20 +1,21 @@
 //
-//  AnotherViewController.swift
+//  CircleViewController.swift
 //  VK
 //
-//  Created by Дмитрий Супрун on 15.01.22.
+//  Created by Дмитрий Супрун on 31.01.22.
 //
 
 import UIKit
 
-class AnotherViewController: UIViewController {
+class CircleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addCricleView()
 
         // Do any additional setup after loading the view.
     }
-    
+        
 
     /*
     // MARK: - Navigation
@@ -26,4 +27,12 @@ class AnotherViewController: UIViewController {
     }
     */
 
+}
+
+private extension CircleViewController {
+    func addCricleView() {
+        let circleView = UIView(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
+        circleView.backgroundColor = .blue
+        view.addSubview(circleView)
+    }
 }

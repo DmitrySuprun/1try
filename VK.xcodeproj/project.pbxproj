@@ -13,6 +13,7 @@
 		D5235C2627A7C27200ABAD13 /* AllGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235C2427A7C27200ABAD13 /* AllGroupTableViewCell.swift */; };
 		D5235C2727A7C27200ABAD13 /* AllGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5235C2527A7C27200ABAD13 /* AllGroupTableViewCell.xib */; };
 		D5235C2A27A7C53F00ABAD13 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235C2927A7C53E00ABAD13 /* File.swift */; };
+		D5235C2D27A8182B00ABAD13 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235C2C27A8182B00ABAD13 /* CircleViewController.swift */; };
 		D5625C07279E0900006759FD /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C06279E0900006759FD /* FriendsListTableViewController.swift */; };
 		D5625C0B279E0A57006759FD /* FriendsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C09279E0A57006759FD /* FriendsListTableViewCell.swift */; };
 		D5625C0C279E0A57006759FD /* FriendsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5625C0A279E0A57006759FD /* FriendsListTableViewCell.xib */; };
@@ -22,13 +23,13 @@
 		D5625C2C27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C2A27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift */; };
 		D5625C2D27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5625C2B27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib */; };
 		D5625C2F27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C2E27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift */; };
-		D566097B2792B68C00F52CD3 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566097A2792B68C00F52CD3 /* AnotherViewController.swift */; };
 		D57B50AD278B7D9E008E256E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B50AC278B7D9E008E256E /* AppDelegate.swift */; };
 		D57B50AF278B7D9E008E256E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B50AE278B7D9E008E256E /* SceneDelegate.swift */; };
 		D57B50B1278B7D9E008E256E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B50B0278B7D9E008E256E /* ViewController.swift */; };
 		D57B50B4278B7D9E008E256E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57B50B2278B7D9E008E256E /* Main.storyboard */; };
 		D57B50B6278B7D9F008E256E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57B50B5278B7D9F008E256E /* Assets.xcassets */; };
 		D57B50B9278B7D9F008E256E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57B50B7278B7D9F008E256E /* LaunchScreen.storyboard */; };
+		D5B6E40627AC365F00844F85 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6E40527AC365F00844F85 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D5235C2427A7C27200ABAD13 /* AllGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewCell.swift; sourceTree = "<group>"; };
 		D5235C2527A7C27200ABAD13 /* AllGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllGroupTableViewCell.xib; sourceTree = "<group>"; };
 		D5235C2927A7C53E00ABAD13 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D5235C2C27A8182B00ABAD13 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		D5625C06279E0900006759FD /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
 		D5625C09279E0A57006759FD /* FriendsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewCell.swift; sourceTree = "<group>"; };
 		D5625C0A279E0A57006759FD /* FriendsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsListTableViewCell.xib; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 		D5625C2A27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5625C2B27A2BC1B006759FD /* ProfileInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 		D5625C2E27A2BC54006759FD /* FriendProfileInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileInfoCollectionViewController.swift; sourceTree = "<group>"; };
-		D566097A2792B68C00F52CD3 /* AnotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 		D57B50A9278B7D9E008E256E /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57B50AC278B7D9E008E256E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57B50AE278B7D9E008E256E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		D57B50B5278B7D9F008E256E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D57B50B8278B7D9F008E256E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D57B50BA278B7D9F008E256E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5B6E40527AC365F00844F85 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		D5235C1B27A7BABC00ABAD13 /* GroupList */ = {
 			isa = PBXGroup;
 			children = (
+				D5235C2B27A8180500ABAD13 /* CircleView */,
 				D5235C2827A7C51A00ABAD13 /* Model */,
 				D5235C2327A7C1A400ABAD13 /* Cell */,
 				D5235C1C27A7BAF200ABAD13 /* ViewController */,
@@ -102,6 +105,14 @@
 				D5235C2927A7C53E00ABAD13 /* File.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D5235C2B27A8180500ABAD13 /* CircleView */ = {
+			isa = PBXGroup;
+			children = (
+				D5235C2C27A8182B00ABAD13 /* CircleViewController.swift */,
+			);
+			path = CircleView;
 			sourceTree = "<group>";
 		};
 		D5625C04279E089C006759FD /* FriendsList */ = {
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				D5235BF327A3D87C00ABAD13 /* GroupTableViewCell.swift */,
+				D5B6E40527AC365F00844F85 /* AvatarView.swift */,
 				D5235BF427A3D87C00ABAD13 /* GroupTableViewCell.xib */,
 			);
 			path = Cell;
@@ -234,7 +246,6 @@
 				D5625C2727A2BB4D006759FD /* FriendProfileInfo */,
 				D57B50AC278B7D9E008E256E /* AppDelegate.swift */,
 				D57B50AE278B7D9E008E256E /* SceneDelegate.swift */,
-				D566097A2792B68C00F52CD3 /* AnotherViewController.swift */,
 				D57B50B2278B7D9E008E256E /* Main.storyboard */,
 				D57B50B5278B7D9F008E256E /* Assets.xcassets */,
 				D57B50B7278B7D9F008E256E /* LaunchScreen.storyboard */,
@@ -324,14 +335,15 @@
 				D57B50AD278B7D9E008E256E /* AppDelegate.swift in Sources */,
 				D5235BF527A3D87C00ABAD13 /* GroupTableViewCell.swift in Sources */,
 				D5625C2C27A2BC1B006759FD /* ProfileInfoCollectionViewCell.swift in Sources */,
+				D5235C2D27A8182B00ABAD13 /* CircleViewController.swift in Sources */,
 				D5235C2127A7BBF800ABAD13 /* AllGroupTableViewController.swift in Sources */,
 				D5625C07279E0900006759FD /* FriendsListTableViewController.swift in Sources */,
 				D5625C0B279E0A57006759FD /* FriendsListTableViewCell.swift in Sources */,
 				D5625C0F279E91A5006759FD /* FriendsListCellModel.swift in Sources */,
 				D5235C2A27A7C53F00ABAD13 /* File.swift in Sources */,
-				D566097B2792B68C00F52CD3 /* AnotherViewController.swift in Sources */,
 				D57B50AF278B7D9E008E256E /* SceneDelegate.swift in Sources */,
 				D5625C1427A1BE85006759FD /* FriendsGroupCellModel.swift in Sources */,
+				D5B6E40627AC365F00844F85 /* AvatarView.swift in Sources */,
 				D5625C2027A2817F006759FD /* GroupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
