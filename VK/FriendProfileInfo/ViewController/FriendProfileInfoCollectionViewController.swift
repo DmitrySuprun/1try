@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
 class FriendProfileInfoCollectionViewController: UICollectionViewController {
 
@@ -54,7 +54,7 @@ var userDataInfo = [FriendsListCellModel]()
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileInfoCollectionViewCellID", for: indexPath) as? ProfileInfoCollectionViewCell else { return UICollectionViewCell() }
         let model = userDataInfo[indexPath.row]
-        cell.setData(with: model)    
+        cell.setData(with: model)
         // Configure the cell
     
         return cell

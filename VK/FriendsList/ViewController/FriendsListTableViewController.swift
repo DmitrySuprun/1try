@@ -9,7 +9,7 @@ import UIKit
 
 class FriendsListTableViewController: UITableViewController {
 
-    var contactList: [FriendsListCellModel] = [.init(name: "Чубака", image: "Chubaka"), .init(name: "Оби-Ван Кеноби", image: "Obi-Van"), .init(name: "Дарт Вейдер", image: "Darth_Vader"), .init(name: "Йода", image: "Yoda")]
+    var contactList: [FriendsListCellModel] = [.init(name: "Чубака", image: "Chubaka", likeCout: 0), .init(name: "Оби-Ван Кеноби", image: "Obi-Van", likeCout: 0), .init(name: "Дарт Вейдер", image: "Darth_Vader", likeCout: 0), .init(name: "Йода", image: "Yoda", likeCout: 0)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class FriendsListTableViewController: UITableViewController {
         
         let createButton = UIAlertAction(title: "Create", style: .default, handler: { [self] _ in
             guard let contactName = alertController.textFields?[0].text else { return }
-            self.contactList.append(.init(name: contactName, image: "NewFriend"))
+            self.contactList.append(.init(name: contactName, image: "NewFriend", likeCout: 0))
             self.tableView.reloadData()
         })
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

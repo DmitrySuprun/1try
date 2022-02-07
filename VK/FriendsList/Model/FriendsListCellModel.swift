@@ -10,4 +10,5 @@ import Foundation
 struct FriendsListCellModel {
     var name: String
     var image: String
+    var likeCout: Int
 }

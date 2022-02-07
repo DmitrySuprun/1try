@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View-->
+        <!--Friends-->
         <scene sceneID="KtK-fx-5CL">
             <objects>
                 <tableViewController id="YxL-Nw-KHu" customClass="FriendsListTableViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                             <outlet property="delegate" destination="YxL-Nw-KHu" id="5PH-HS-849"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Table View" id="ab1-Md-sUD">
+                    <navigationItem key="navigationItem" title="Friends" id="ab1-Md-sUD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9lc-PD-iga">
                             <connections>
                                 <action selector="addNewFriend:" destination="YxL-Nw-KHu" id="E4x-5C-GQa"/>
@@ -51,22 +51,23 @@
         <scene sceneID="ksd-9G-Xpm">
             <objects>
                 <collectionViewController id="Cix-DM-sQl" customClass="FriendProfileInfoCollectionViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lIf-DE-rO4">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="lIf-DE-rO4">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Yp-P4-ux0">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Yp-P4-ux0">
+                            <size key="itemSize" width="250" height="250"/>
+                            <size key="estimatedItemSize" width="250" height="250"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M3n-Ff-Hck">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="89" y="0.0" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eaY-9u-eVe">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
                             </collectionViewCell>
@@ -190,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="590.76923076923072" y="-280.09478672985779"/>
         </scene>
-        <!--Table View-->
+        <!--Group-->
         <scene sceneID="DUV-qs-7Gm">
             <objects>
                 <tableViewController id="cpi-N0-i1b" customClass="GroupTableViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
@@ -203,7 +204,7 @@
                             <outlet property="delegate" destination="cpi-N0-i1b" id="U3L-Fk-9B2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Table View" id="rrt-XP-6QJ">
+                    <navigationItem key="navigationItem" title="Group" id="rrt-XP-6QJ">
                         <barButtonItem key="rightBarButtonItem" image="chevron.forward" catalog="system" id="udp-bn-IPW">
                             <connections>
                                 <segue destination="APF-4m-RNM" kind="show" id="QR2-Bz-HPI"/>
