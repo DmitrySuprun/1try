@@ -9,18 +9,12 @@ import UIKit
 
 class GroupTableViewController: UITableViewController {
     
-    let groupList: [GroupListCellModel] = [.init(name: "Dark Side", image: "darkSide"), .init(name: "Stars", image: "Stars"), .init(name: "StarWars", image: "StarWars")]
+    var groupList: [GroupListCellModel] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
         tableView.register(GroupTableViewCell.nib(), forCellReuseIdentifier: "GroupTableViewCellID")
     }
 
@@ -33,64 +27,24 @@ class GroupTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return groupList.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCellID", for: indexPath) as! GroupTableViewCell
         let model = groupList[indexPath.row]
         cell.setData(with: model)
         cell.circleView(image: model.image)
-        
-
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    @IBAction func unwindAddGroup (segue: UIStoryboardSegue) {
+        if segue.identifier == "addCellID" {
+            guard let allGroupTableViewController = segue.source as? AllGroupTableViewController,
+                  let index = allGroupTableViewController.tableView.indexPathForSelectedRow else { return }
+            let selectedGroup = allGroupTableViewController.allGroup[index.row]
+            groupList.append(.init(name: selectedGroup.name, image: selectedGroup.image))
+            tableView.reloadData()
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

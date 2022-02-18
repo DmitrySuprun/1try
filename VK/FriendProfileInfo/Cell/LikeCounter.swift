@@ -14,24 +14,6 @@ class LikeCounter: UIControl {
     private var buttonAndLabel: [UIView] = []
     private var stackView: UIStackView!
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
-    
-//    var selectedDay: Day? = nil {
-//        didSet {
-//            self.updateSelectedDay()
-//            self.sendActions(for: .valueChanged)
-//        }
-//    }
-    
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
@@ -64,13 +46,6 @@ class LikeCounter: UIControl {
         stackView.distribution = .fillEqually
     }
     
-//    private func updateSelectedDay() {
-//        for (index, button) in self.buttons.enumerated() {
-//            guard let day = Day(rawValue: index) else { continue }
-//            button.isSelected = day == self.selectedDay
-//        }
-//    }
-//
     @objc private func likePress(_ sender: UIButton) {
         let label = buttonAndLabel[1] as! UILabel
         if sender.titleLabel?.text == "🤍" {
@@ -83,8 +58,6 @@ class LikeCounter: UIControl {
         }
     }
 
-//    }
-//
     override func layoutSubviews() {
         super.layoutSubviews()
         stackView.frame = bounds
