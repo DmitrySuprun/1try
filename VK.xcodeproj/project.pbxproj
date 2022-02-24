@@ -13,6 +13,7 @@
 		D5235C2627A7C27200ABAD13 /* AllGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235C2427A7C27200ABAD13 /* AllGroupTableViewCell.swift */; };
 		D5235C2A27A7C53F00ABAD13 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235C2927A7C53E00ABAD13 /* File.swift */; };
 		D5235C2D27A8182B00ABAD13 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5235C2C27A8182B00ABAD13 /* CircleViewController.swift */; };
+		D530834B27C7D38E00CBEAB5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530834A27C7D38E00CBEAB5 /* Session.swift */; };
 		D543B51527C28DB7008E5391 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543B51427C28DB7008E5391 /* LoadingView.swift */; };
 		D544E31127B1C5FD00D57083 /* LikeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D544E31027B1C5FC00D57083 /* LikeCounter.swift */; };
 		D5625C07279E0900006759FD /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5625C06279E0900006759FD /* FriendsListViewController.swift */; };
@@ -40,6 +41,7 @@
 		D5235C2427A7C27200ABAD13 /* AllGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewCell.swift; sourceTree = "<group>"; };
 		D5235C2927A7C53E00ABAD13 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D5235C2C27A8182B00ABAD13 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		D530834A27C7D38E00CBEAB5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		D543B51427C28DB7008E5391 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D544E31027B1C5FC00D57083 /* LikeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCounter.swift; sourceTree = "<group>"; };
 		D5625C06279E0900006759FD /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 				D5235C2C27A8182B00ABAD13 /* CircleViewController.swift */,
 			);
 			path = CircleView;
+			sourceTree = "<group>";
+		};
+		D530834927C7D34500CBEAB5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				D530834A27C7D38E00CBEAB5 /* Session.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		D543B51327C28D27008E5391 /* Animation */ = {
@@ -249,6 +259,7 @@
 		D57B50AB278B7D9E008E256E /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				D530834927C7D34500CBEAB5 /* Session */,
 				D5625C2327A2A7E5006759FD /* Login */,
 				D5625C10279EFAF7006759FD /* Group */,
 				D5235C1B27A7BABC00ABAD13 /* GroupList */,
@@ -350,6 +361,7 @@
 				D5235C2127A7BBF800ABAD13 /* AllGroupTableViewController.swift in Sources */,
 				D5625C07279E0900006759FD /* FriendsListViewController.swift in Sources */,
 				D5625C0B279E0A57006759FD /* FriendsListTableViewCell.swift in Sources */,
+				D530834B27C7D38E00CBEAB5 /* Session.swift in Sources */,
 				D5625C0F279E91A5006759FD /* FriendsListCellModel.swift in Sources */,
 				D5235C2A27A7C53F00ABAD13 /* File.swift in Sources */,
 				D57B50AF278B7D9E008E256E /* SceneDelegate.swift in Sources */,
