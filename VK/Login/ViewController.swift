@@ -9,8 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let load = LoadingView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        load.center = view.center
+        view.addSubview(load)
+        
         // Do any additional setup after loading the view.
     }
     
