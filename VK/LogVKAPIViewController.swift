@@ -35,7 +35,7 @@ class LogVKAPIViewController: UIViewController {
         webView.load(request)
         
         
-        
+        // Тестовые запросы:
         
         /*
          AF.request("http://samples.openweathermap.org/data/2.5/forecast?q=Moscow,DE&appid=b1b15e88fa797225412429c1c50c122a1").responseJSON { response in
@@ -153,6 +153,11 @@ extension LogVKAPIViewController: WKNavigationDelegate {
                 let json = try? JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed)
                 print(json)
             }
+//            Раскодировка дата через encoding
+//            let task = session.dataTask(with: request) { data, _, _ in
+//                let jsonString = String(data: data!, encoding: .utf8)
+//                print(jsonString)
+//            }
             task.resume()
         }
         let button3 = UIAlertAction(title: "Получение групп текущего пользователя", style: .default) { _ in
@@ -175,9 +180,21 @@ extension LogVKAPIViewController: WKNavigationDelegate {
                 let json = try? JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed)
                 print(json)
             }
+           
             task.resume()
         }
         let button4 = UIAlertAction(title: "Получение групп по поисковому запросу", style: .default) { _ in
+            let alertFindGroup = UIAlertController(title: "Find Group", message: "let's find...", preferredStyle: .alert)
+            alertFindGroup.addTextField(configurationHandler: nil)
+            let findButton = UIAlertAction(title: "Find", style: .default) { _ in
+                AF.request("https://api.vk.com/method/groups.search?&access_token=\(SessionVK.instance.token)&v=5.131&q=\((alertFindGroup.textFields![0].text)!)&count=10").responseJSON(completionHandler: { response in
+                    print(response.value)
+                })
+                print(alertFindGroup.textFields![0].text)
+            }
+            alertFindGroup.addAction(findButton)
+            self.present(alertFindGroup, animated: true)
+            
             
         }
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -186,6 +203,7 @@ extension LogVKAPIViewController: WKNavigationDelegate {
         alert.addAction(button1)
         alert.addAction(button2)
         alert.addAction(button3)
+        alert.addAction(button4)
         present(alert, animated: true)
         
     }
