@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
 class FriendProfileInfoCollectionViewController: UICollectionViewController {
 
@@ -22,7 +22,7 @@ var userDataInfo = [FriendsListCellModel]()
         // Register cell classes
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        collectionView.register(ProfileInfoCollectionViewCell.nib(), forCellWithReuseIdentifier: "ProfileInfoCollectionViewCell")
+        collectionView.register(ProfileInfoCollectionViewCell.nib(), forCellWithReuseIdentifier: "ProfileInfoCollectionViewCellID")
         
         // Do any additional setup after loading the view.
     }
@@ -52,9 +52,9 @@ var userDataInfo = [FriendsListCellModel]()
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileInfoCollectionViewCell", for: indexPath) as? ProfileInfoCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileInfoCollectionViewCellID", for: indexPath) as? ProfileInfoCollectionViewCell else { return UICollectionViewCell() }
         let model = userDataInfo[indexPath.row]
-        cell.setData(with: model)    
+        cell.setData(with: model)
         // Configure the cell
     
         return cell

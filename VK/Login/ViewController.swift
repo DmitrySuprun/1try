@@ -9,8 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let load = LoadingView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        load.center = view.center
+        view.addSubview(load)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -23,8 +28,8 @@ class ViewController: UIViewController {
 //        } else {
 //            let alertWrongPassword = UIAlertController(title: "Ошибка", message: "Неверный пароль", preferredStyle: .alert)
 //            let okButton = UIAlertAction(title: "Ok", style: .default, handler: {_ in
-//                self.login.text = ""
-//                self.password.text = ""
+//                self.login.text = "admin"
+//                self.password.text = "123456"
 //            })
 //            alertWrongPassword.addAction(okButton)
 //            present(alertWrongPassword, animated: true, completion: nil)

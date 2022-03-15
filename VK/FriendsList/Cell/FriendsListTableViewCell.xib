@@ -36,11 +36,12 @@
                     <constraint firstItem="IRd-Rn-FFQ" firstAttribute="centerY" secondItem="iap-CG-iUa" secondAttribute="centerY" id="zZB-s2-LYb"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.99607843159999998" green="0.97647058959999999" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
                 <outlet property="contactImageView" destination="d0M-iG-cW5" id="52i-cK-nyO"/>
                 <outlet property="titleLabel" destination="IRd-Rn-FFQ" id="k9L-qR-PZ7"/>
             </connections>
-            <point key="canvasLocation" x="16" y="-80"/>
+            <point key="canvasLocation" x="15.942028985507248" y="-80.357142857142847"/>
         </tableViewCell>
     </objects>
 </document>
